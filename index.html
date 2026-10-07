@@ -1,0 +1,3634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Rashmi B R - Information Science Engineer showcasing skills in Java, Python, C, GitHub, introduction video, projects, and testimonials." />
+  <title>Rashmi B R | Software Engineer Portfolio</title>
+
+  <!-- Google Fonts: Press Start 2P (8-bit pixel), Pixelify Sans, Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Pixelify+Sans:wght@500;600;700&family=Press+Start+2P&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* =========================================================
+       CSS VARIABLES & THEME TOKENS (LIGHT DEFAULT)
+       ========================================================= */
+    :root {
+      /* Default fallback (Light Theme) */
+      --bg-overlay: rgba(248, 250, 252, 0.92);
+      --bg-surface: rgba(255, 255, 255, 0.94);
+      --bg-surface-hover: rgba(241, 245, 249, 0.98);
+      --border-color: rgba(15, 23, 42, 0.12);
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #0891b2;
+      --accent-pixel: #10b981;
+      --pixel-border-color: #0f172a;
+      --pixel-card-bg: rgba(255, 255, 255, 0.95);
+      --pixel-shadow: 4px 4px 0px #0f172a;
+      --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #0891b2 100%);
+      --glow-color: rgba(79, 70, 229, 0.18);
+      --nav-bg: rgba(255, 255, 255, 0.92);
+      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --progress-bg: rgba(15, 23, 42, 0.08);
+      --timeline-line: linear-gradient(180deg, #4f46e5 0%, #0891b2 50%, #10b981 100%);
+      --modal-bg: rgba(255, 255, 255, 0.98);
+    }
+
+    /* =========================================================
+       CSS MEDIA QUERY: AUTO-DETECT BROWSER DARK MODE PREFERENCE
+       ========================================================= */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg-overlay: rgba(10, 15, 29, 0.90);
+        --bg-surface: rgba(23, 32, 54, 0.80);
+        --bg-surface-hover: rgba(36, 49, 82, 0.92);
+        --border-color: rgba(255, 255, 255, 0.15);
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --accent-primary: #818cf8;
+        --accent-secondary: #22d3ee;
+        --accent-pixel: #34d399;
+        --pixel-border-color: #38bdf8;
+        --pixel-card-bg: rgba(15, 23, 42, 0.92);
+        --pixel-shadow: 4px 4px 0px #0284c7;
+        --accent-gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        --glow-color: rgba(99, 102, 241, 0.35);
+        --nav-bg: rgba(15, 23, 42, 0.88);
+        --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        --progress-bg: rgba(255, 255, 255, 0.1);
+        --timeline-line: linear-gradient(180deg, #818cf8 0%, #22d3ee 50%, #34d399 100%);
+        --modal-bg: rgba(15, 23, 42, 0.98);
+      }
+    }
+
+    /* Explicit manual theme overrides */
+    [data-theme="dark"] {
+      --bg-overlay: rgba(10, 15, 29, 0.90);
+      --bg-surface: rgba(23, 32, 54, 0.80);
+      --bg-surface-hover: rgba(36, 49, 82, 0.92);
+      --border-color: rgba(255, 255, 255, 0.15);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-primary: #818cf8;
+      --accent-secondary: #22d3ee;
+      --accent-pixel: #34d399;
+      --pixel-border-color: #38bdf8;
+      --pixel-card-bg: rgba(15, 23, 42, 0.92);
+      --pixel-shadow: 4px 4px 0px #0284c7;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+      --glow-color: rgba(99, 102, 241, 0.35);
+      --nav-bg: rgba(15, 23, 42, 0.88);
+      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --progress-bg: rgba(255, 255, 255, 0.1);
+      --timeline-line: linear-gradient(180deg, #818cf8 0%, #22d3ee 50%, #34d399 100%);
+      --modal-bg: rgba(15, 23, 42, 0.98);
+    }
+
+    [data-theme="light"] {
+      --bg-overlay: rgba(248, 250, 252, 0.92);
+      --bg-surface: rgba(255, 255, 255, 0.94);
+      --bg-surface-hover: rgba(241, 245, 249, 0.98);
+      --border-color: rgba(15, 23, 42, 0.12);
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #0891b2;
+      --accent-pixel: #10b981;
+      --pixel-border-color: #0f172a;
+      --pixel-card-bg: rgba(255, 255, 255, 0.95);
+      --pixel-shadow: 4px 4px 0px #0f172a;
+      --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #0891b2 100%);
+      --glow-color: rgba(79, 70, 229, 0.18);
+      --nav-bg: rgba(255, 255, 255, 0.92);
+      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --progress-bg: rgba(15, 23, 42, 0.08);
+      --timeline-line: linear-gradient(180deg, #4f46e5 0%, #0891b2 50%, #10b981 100%);
+      --modal-bg: rgba(255, 255, 255, 0.98);
+    }
+
+    /* =========================================================
+       BASE & RESET STYLES
+       ========================================================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-primary);
+      background-image:
+        linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+        url('background.jpeg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    /* =========================================================
+       CLEAN & MINIMALIST CARD STYLES
+       ========================================================= */
+    .glass-card {
+      background: var(--bg-surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: 1.25rem;
+      padding: 2.2rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px var(--glow-color);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    /* =========================================================
+       PIXEL ART SYSTEM & HERO STYLES
+       ========================================================= */
+    .pixel-frame {
+      position: relative;
+      background: var(--pixel-card-bg);
+      border: 4px solid var(--pixel-border-color);
+      box-shadow: var(--pixel-shadow);
+      padding: 2.2rem;
+      border-radius: 0;
+      image-rendering: pixelated;
+    }
+
+    .pixel-corner-decor {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: var(--accent-primary);
+    }
+    .pixel-corner-tl { top: -6px; left: -6px; }
+    .pixel-corner-tr { top: -6px; right: -6px; }
+    .pixel-corner-bl { bottom: -6px; left: -6px; }
+    .pixel-corner-br { bottom: -6px; right: -6px; }
+
+    .pixel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.65rem;
+      padding: 0.5rem 0.9rem;
+      background: var(--accent-primary);
+      color: #ffffff;
+      border: 2px solid var(--pixel-border-color);
+      box-shadow: 2px 2px 0px var(--pixel-border-color);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .pixel-dot-pulse {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      box-shadow: 0 0 8px #4ade80;
+      display: inline-block;
+      animation: pixelBlink 1s infinite steps(1);
+    }
+
+    @keyframes pixelBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .hero-pixel-welcome {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.8rem;
+      color: var(--accent-secondary);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-pixel-title {
+      font-family: 'Pixelify Sans', 'Outfit', sans-serif;
+      font-size: 3.4rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-pixel-title span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-pixel-tagline {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+      max-width: 580px;
+    }
+
+    .pixel-stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      padding: 0.9rem 1.2rem;
+      background: rgba(0, 0, 0, 0.06);
+      border: 2px solid var(--border-color);
+      margin-bottom: 2rem;
+      border-radius: 4px;
+      align-items: center;
+    }
+
+    .pixel-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.58rem;
+      color: var(--text-secondary);
+    }
+
+    .stat-tag {
+      color: var(--accent-primary);
+      font-weight: bold;
+    }
+
+    .pixel-progress {
+      width: 75px;
+      height: 10px;
+      background: rgba(0,0,0,0.2);
+      border: 1px solid var(--border-color);
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    .pixel-progress-fill {
+      height: 100%;
+      background: var(--accent-pixel);
+      width: 100%;
+    }
+
+    .hero-pixel-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .pixel-btn {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.7rem;
+      padding: 0.85rem 1.4rem;
+      border: 3px solid var(--pixel-border-color);
+      box-shadow: var(--pixel-shadow);
+      background: var(--accent-primary);
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-transform: uppercase;
+      transition: transform 0.08s ease, box-shadow 0.08s ease;
+      image-rendering: pixelated;
+    }
+
+    .pixel-btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px var(--pixel-border-color);
+    }
+
+    .pixel-btn:active {
+      transform: translate(4px, 4px);
+      box-shadow: 0px 0px 0px transparent;
+    }
+
+    .pixel-btn-secondary {
+      background: var(--pixel-card-bg);
+      color: var(--text-primary);
+    }
+
+    .pixel-btn-video {
+      background: linear-gradient(135deg, #0891b2 0%, #10b981 100%);
+      color: #ffffff;
+    }
+
+    .pixel-avatar-frame {
+      position: relative;
+      padding: 10px;
+      background: var(--pixel-card-bg);
+      border: 4px solid var(--pixel-border-color);
+      box-shadow: var(--pixel-shadow);
+      display: inline-block;
+    }
+
+    .pixel-avatar-img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      border: 2px solid var(--border-color);
+    }
+
+    .pixel-avatar-badge {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.55rem;
+      background: var(--accent-pixel);
+      color: #0f172a;
+      padding: 0.4rem 0.8rem;
+      border: 2px solid var(--pixel-border-color);
+      box-shadow: 2px 2px 0px var(--pixel-border-color);
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.9rem;
+    }
+
+    .social-btn {
+      width: 42px;
+      height: 42px;
+      border: 2px solid var(--pixel-border-color);
+      box-shadow: 2px 2px 0px var(--pixel-border-color);
+      background: var(--pixel-card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      transition: all 0.15s ease;
+    }
+
+    .social-btn:hover {
+      color: #ffffff;
+      background: var(--accent-primary);
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0px var(--pixel-border-color);
+    }
+
+    /* =========================================================
+       ABOUT ME SECTION & VIDEO SHOWCASE
+       ========================================================= */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .about-profile-card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-img-wrapper {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 1rem;
+      object-fit: cover;
+      border: 3px solid var(--border-color);
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .about-profile-img:hover {
+      transform: scale(1.02);
+    }
+
+    .about-contact-list {
+      width: 100%;
+      list-style: none;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    .about-contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+      padding: 0.5rem 0.75rem;
+      background: rgba(0, 0, 0, 0.04);
+      border-radius: 0.5rem;
+      word-break: break-all;
+    }
+
+    .about-contact-list i {
+      color: var(--accent-primary);
+      font-size: 1rem;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .about-main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .bio-lead {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    .bio-text {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .video-showcase-card {
+      margin-top: 1rem;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-color);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--card-shadow);
+    }
+
+    .video-showcase-card:hover {
+      border-color: var(--accent-secondary);
+      box-shadow: 0 15px 35px -10px var(--glow-color);
+    }
+
+    .video-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .video-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .video-title-wrap i {
+      font-size: 1.3rem;
+      color: var(--accent-secondary);
+    }
+
+    .video-player-wrapper {
+      position: relative;
+      border-radius: 0.85rem;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      background: #000000;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-video-element {
+      width: 100%;
+      max-height: 400px;
+      display: block;
+      border-radius: 0.75rem;
+      outline: none;
+      background-color: #000000;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .highlight-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: all 0.25s ease;
+    }
+
+    .highlight-box:hover {
+      border-color: var(--accent-primary);
+      transform: translateY(-2px);
+    }
+
+    .highlight-box h4 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .highlight-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .interests-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.75rem;
+    }
+
+    .interest-tag {
+      font-size: 0.85rem;
+      padding: 0.35rem 0.85rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      color: var(--accent-primary);
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* =========================================================
+       SKILLS SECTION
+       ========================================================= */
+    .skills-main-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .skill-category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -10px var(--glow-color);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+    }
+
+    .skill-card-header h3 {
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      color: var(--text-primary);
+    }
+
+    .skill-card-header h3 i {
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-category-card:hover .skill-card-header h3 i {
+      transform: scale(1.15) rotate(5deg);
+    }
+
+    .skill-bar-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .skill-bar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .skill-info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .skill-name-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .skill-name-wrap i {
+      font-size: 1.15rem;
+      width: 22px;
+      text-align: center;
+    }
+
+    .skill-percentage-tag {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.62rem;
+      color: var(--accent-primary);
+      background: rgba(99, 102, 241, 0.12);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .skill-track {
+      height: 10px;
+      background: var(--progress-bg);
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--border-color);
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: 9999px;
+      background: var(--accent-gradient);
+      position: relative;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .skill-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%);
+      animation: shimmerBar 2.5s infinite;
+    }
+
+    @keyframes shimmerBar {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .skill-badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-interactive-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 0.95rem;
+      background: var(--bg-surface-hover);
+      border: 1px solid var(--border-color);
+      border-radius: 0.6rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      cursor: default;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .skill-interactive-badge:hover {
+      background: var(--accent-primary);
+      color: #ffffff;
+      border-color: var(--accent-primary);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 16px -4px var(--glow-color);
+    }
+
+    .skill-interactive-badge:hover i {
+      color: #ffffff !important;
+      transform: rotate(8deg);
+    }
+
+    .skill-meta-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      line-height: 1.45;
+    }
+
+    /* =========================================================
+       TIMELINE COMPONENT
+       ========================================================= */
+    .timeline-section-wrapper {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+
+    .timeline-track-line {
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      bottom: 20px;
+      width: 4px;
+      background: var(--timeline-line);
+      transform: translateX(-50%);
+      border-radius: 4px;
+      box-shadow: 0 0 12px var(--glow-color);
+    }
+
+    .timeline-container-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      position: relative;
+      list-style: none;
+    }
+
+    .timeline-event-row {
+      display: flex;
+      position: relative;
+      align-items: center;
+      width: 100%;
+    }
+
+    .timeline-event-row:nth-child(odd) {
+      justify-content: flex-start;
+    }
+
+    .timeline-event-row:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    .timeline-event-card-wrapper {
+      width: 45%;
+      position: relative;
+    }
+
+    .timeline-node-marker {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 3px solid var(--accent-primary);
+      box-shadow: 0 0 15px var(--glow-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-primary);
+      font-size: 1.1rem;
+      z-index: 5;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .timeline-event-card {
+      background: var(--bg-surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid var(--border-color);
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .timeline-event-row:hover .timeline-node-marker {
+      transform: translate(-50%, -50%) scale(1.22);
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 0 25px var(--glow-color);
+    }
+
+    .timeline-event-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: var(--accent-primary);
+      box-shadow: 0 20px 40px -12px var(--glow-color);
+    }
+
+    .timeline-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .timeline-category-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .timeline-badge-edu {
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--accent-primary);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+    }
+
+    .timeline-badge-proj {
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-secondary);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+    }
+
+    .timeline-badge-cert {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .timeline-date-stamp {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.58rem;
+      color: var(--text-muted);
+    }
+
+    .timeline-event-card h3 {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+      line-height: 1.35;
+    }
+
+    .timeline-sub-org {
+      font-size: 0.92rem;
+      color: var(--accent-primary);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .timeline-desc-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .timeline-pill {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    .timeline-event-card:hover .timeline-pill {
+      border-color: var(--accent-primary);
+      color: var(--text-primary);
+    }
+
+    /* =========================================================
+       PROJECTS SECTION WITH CLICKABLE THUMBNAILS & HOVER EFFECTS
+       ========================================================= */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.2rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      padding: 1.5rem;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -15px var(--glow-color);
+      border-color: var(--accent-primary);
+    }
+
+    .project-thumbnail-wrapper {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      border-radius: 0.85rem;
+      overflow: hidden;
+      margin-bottom: 1.35rem;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+      background: #0f172a;
+    }
+
+    .project-thumbnail-art {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: transform 0.4s ease;
+      position: relative;
+    }
+
+    .project-card:hover .project-thumbnail-art {
+      transform: scale(1.06);
+    }
+
+    .project-thumbnail-art i.main-art-icon {
+      font-size: 3.2rem;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-thumbnail-art i.main-art-icon {
+      transform: scale(1.1) rotate(4deg);
+    }
+
+    .thumbnail-type-badge {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.55rem;
+      padding: 0.35rem 0.65rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .thumbnail-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #ffffff;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .project-thumbnail-wrapper:hover .thumbnail-overlay {
+      opacity: 1;
+    }
+
+    .thumbnail-overlay i {
+      font-size: 1.6rem;
+      color: var(--accent-secondary);
+      animation: pulsePlay 1.5s infinite;
+    }
+
+    @keyframes pulsePlay {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .project-content-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-content-body h3 {
+      font-size: 1.28rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .project-content-body p {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .project-actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.1rem;
+    }
+
+    .btn-detail-trigger {
+      background: transparent;
+      border: none;
+      color: var(--accent-primary);
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-detail-trigger:hover {
+      color: var(--accent-secondary);
+      transform: translateX(3px);
+    }
+
+    /* =========================================================
+       PROJECT MODAL STYLES (DETAILED VIEW POP-UP)
+       ========================================================= */
+    .project-modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding: 1rem;
+    }
+
+    .project-modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .project-modal-content {
+      background: var(--modal-bg);
+      border: 2px solid var(--border-color);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6);
+      border-radius: 1.25rem;
+      width: 100%;
+      max-width: 680px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.2rem;
+      position: relative;
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-modal-backdrop.active .project-modal-content {
+      transform: scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-surface-hover);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: #ef4444;
+      color: #ffffff;
+      border-color: #ef4444;
+      transform: rotate(90deg);
+    }
+
+    .modal-header-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-project-title {
+      font-size: 1.65rem;
+      margin-top: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .modal-body-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .modal-spec-block {
+      background: var(--bg-surface-hover);
+      border-radius: 0.75rem;
+      padding: 1.2rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .modal-spec-block h4 {
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .modal-tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .modal-footer-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================================
+       TESTIMONIALS SECTION (ROUNDED CARDS & DROP SHADOWS)
+       ========================================================= */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.2rem;
+    }
+
+    .testimonial-card {
+      background: var(--bg-surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid var(--border-color);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px -12px var(--glow-color);
+      border-color: var(--accent-primary);
+    }
+
+    .testimonial-card-top {
+      margin-bottom: 1.25rem;
+    }
+
+    .testimonial-quote-icon {
+      font-size: 1.8rem;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 0.25rem;
+      color: #f59e0b;
+      font-size: 0.85rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .testimonial-quote-text {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .testimonial-author-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.2rem;
+    }
+
+    .testimonial-author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px var(--glow-color);
+      border: 2px solid var(--bg-surface);
+      flex-shrink: 0;
+    }
+
+    .testimonial-author-info h4 {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .testimonial-author-info p {
+      font-size: 0.82rem;
+      color: var(--accent-primary);
+      font-weight: 500;
+    }
+
+    .testimonial-author-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* =========================================================
+       AI CHAT INTERFACE SECTION
+       ========================================================= */
+    .chat-interface-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .chat-card {
+      background: var(--bg-surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid var(--border-color);
+      border-radius: 1.25rem;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .chat-card:hover {
+      box-shadow: 0 20px 45px -15px var(--glow-color);
+      border-color: rgba(99, 102, 241, 0.35);
+    }
+
+    .chat-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 1.5rem;
+      background: rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid var(--border-color);
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    [data-theme="dark"] .chat-header-bar {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .chat-avatar-status {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .chat-avatar-wrap {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px var(--glow-color);
+      border: 2px solid var(--bg-surface);
+    }
+
+    .chat-status-pulse {
+      position: absolute;
+      bottom: 1px;
+      right: 1px;
+      width: 11px;
+      height: 11px;
+      background: var(--accent-pixel);
+      border-radius: 50%;
+      border: 2px solid var(--bg-surface);
+      animation: statusGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes statusGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      50% { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+    }
+
+    .chat-header-text h3 {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .chat-model-badge {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.55rem;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+    }
+
+    .chat-status-label {
+      font-size: 0.78rem;
+      color: var(--accent-pixel);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .chat-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chat-action-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      border-radius: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+
+    .chat-action-btn:hover {
+      background: var(--bg-surface-hover);
+      color: var(--text-primary);
+      border-color: var(--accent-primary);
+    }
+
+    /* Messages Display Box */
+    .chat-messages-container {
+      height: 420px;
+      overflow-y: auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      scroll-behavior: smooth;
+    }
+
+    .chat-messages-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .chat-messages-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .chat-messages-container::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    .chat-msg {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 85%;
+      animation: msgFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes msgFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .chat-msg.bot {
+      align-self: flex-start;
+    }
+
+    .chat-msg.user {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+
+    .chat-msg-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .chat-msg.user .chat-msg-avatar {
+      background: linear-gradient(135deg, #0891b2 0%, #10b981 100%);
+    }
+
+    .chat-bubble-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .chat-bubble {
+      padding: 0.85rem 1.15rem;
+      border-radius: 1rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      position: relative;
+    }
+
+    .chat-msg.bot .chat-bubble {
+      background: var(--bg-surface-hover);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-top-left-radius: 0.25rem;
+    }
+
+    .chat-msg.user .chat-bubble {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border-top-right-radius: 0.25rem;
+      box-shadow: 0 4px 14px var(--glow-color);
+    }
+
+    .chat-msg-time {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .chat-msg.user .chat-msg-time {
+      text-align: right;
+    }
+
+    /* Formatted message lists & highlights */
+    .chat-bubble ul {
+      margin: 0.5rem 0 0.5rem 1.25rem;
+      padding: 0;
+    }
+
+    .chat-bubble li {
+      margin-bottom: 0.35rem;
+    }
+
+    .chat-bubble strong {
+      color: inherit;
+      font-weight: 600;
+    }
+
+    .chat-bubble-badge {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      background: rgba(79, 70, 229, 0.15);
+      color: var(--accent-primary);
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin: 0.15rem 0.2rem;
+    }
+
+    .chat-msg.user .chat-bubble-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* Typing Indicator Animation */
+    .chat-typing-wrap {
+      display: none;
+      align-items: center;
+      gap: 0.75rem;
+      align-self: flex-start;
+      margin-bottom: 0.5rem;
+      animation: msgFadeIn 0.25s ease;
+    }
+
+    .chat-typing-wrap.active {
+      display: flex;
+    }
+
+    .typing-dots-bubble {
+      background: var(--bg-surface-hover);
+      border: 1px solid var(--border-color);
+      padding: 0.65rem 1rem;
+      border-radius: 1rem;
+      border-top-left-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .typing-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      animation: dotBounce 1.4s infinite ease-in-out both;
+    }
+
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+    @keyframes dotBounce {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Suggestions Bar */
+    .chat-suggestions-wrap {
+      padding: 0.75rem 1.5rem;
+      background: rgba(0, 0, 0, 0.015);
+      border-top: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .chat-suggestions-wrap {
+      background: rgba(255, 255, 255, 0.01);
+    }
+
+    .chat-suggestions-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .chat-suggestions-list {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.3rem;
+      scrollbar-width: thin;
+    }
+
+    .chat-suggestion-chip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 2rem;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .chat-suggestion-chip:hover {
+      background: var(--accent-primary);
+      color: #ffffff;
+      border-color: var(--accent-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px var(--glow-color);
+    }
+
+    .chat-suggestion-chip i {
+      font-size: 0.75rem;
+      color: var(--accent-secondary);
+    }
+
+    .chat-suggestion-chip:hover i {
+      color: #ffffff;
+    }
+
+    /* Input Footer Area */
+    .chat-input-form {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 1.1rem 1.5rem;
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-surface);
+    }
+
+    .chat-input-field {
+      flex: 1;
+      padding: 0.85rem 1.15rem;
+      border: 1.5px solid var(--border-color);
+      border-radius: 0.75rem;
+      background: var(--bg-surface-hover);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .chat-input-field:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px var(--glow-color);
+    }
+
+    .chat-send-btn {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border: none;
+      border-radius: 0.75rem;
+      padding: 0.85rem 1.35rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 14px var(--glow-color);
+    }
+
+    .chat-send-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px var(--glow-color);
+    }
+
+    .chat-send-btn:active {
+      transform: translateY(0);
+    }
+
+    .chat-footnote-hint {
+      text-align: center;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 0.85rem;
+    }
+
+    /* =========================================================
+       CONTACT SECTION
+       ========================================================= */
+    .contact-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border-color);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.95rem;
+      border-radius: 0.5rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+    }
+
+    /* =========================================================
+       HEADER & NAVIGATION
+       ========================================================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--pixel-border-color);
+      transition: background 0.3s ease;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .brand-logo {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.82rem;
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.6rem;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .theme-toggle-btn {
+      background: var(--pixel-card-bg);
+      border: 2px solid var(--pixel-border-color);
+      box-shadow: 2px 2px 0px var(--pixel-border-color);
+      color: var(--text-primary);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.15s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0px var(--pixel-border-color);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    footer {
+      border-top: 2px solid var(--pixel-border-color);
+      padding: 2.5rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+    }
+
+    /* =========================================================
+       RESPONSIVENESS
+       ========================================================= */
+    @media (max-width: 868px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-contact-list {
+        text-align: left;
+      }
+
+      .hero-pixel-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-pixel-tagline {
+        margin: 0 auto 1.75rem auto;
+      }
+
+      .hero-pixel-actions,
+      .social-links,
+      .pixel-stats-bar,
+      .interests-tags {
+        justify-content: center;
+      }
+
+      .timeline-track-line {
+        left: 24px;
+      }
+
+      .timeline-node-marker {
+        left: 24px;
+      }
+
+      .timeline-event-row {
+        justify-content: flex-end !important;
+        padding-left: 60px;
+      }
+
+      .timeline-event-card-wrapper {
+        width: 100%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HEADER & NAVIGATION SECTION
+       ========================================================= -->
+  <header>
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Portfolio Home">
+        <i class="fa-solid fa-gamepad" style="color: var(--accent-pixel);"></i> RASHMI.DEV
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#intro-video">Video</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Feedback</a></li>
+          <li><a href="#ai-chat"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-pixel); font-size: 0.8rem; margin-right: 3px;"></i> AI Chat</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Night / Dark Mode Toggle Button Placeholder -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Night Mode"
+          title="Toggle Light/Dark Theme (Auto-detects browser default)">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="pixel-btn" style="padding: 0.5rem 0.9rem; font-size: 0.65rem;">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       MAIN CONTENT CONTAINER
+       ========================================================= -->
+  <main>
+
+    <!-- =======================================================
+         1. HERO SECTION (PIXEL ART STYLE DESIGN & BACKGROUND)
+         ======================================================= -->
+    <section id="hero" aria-label="Introduction Hero">
+      <div class="container hero-grid" style="display: grid; grid-template-columns: 1.25fr 0.75fr; align-items: center; gap: 3.5rem;">
+        
+        <!-- Left: Pixel Welcome Card & Info -->
+        <div class="pixel-frame hero-text-card">
+          <!-- Pixel Corner Studs -->
+          <div class="pixel-corner-decor pixel-corner-tl"></div>
+          <div class="pixel-corner-decor pixel-corner-tr"></div>
+          <div class="pixel-corner-decor pixel-corner-bl"></div>
+          <div class="pixel-corner-decor pixel-corner-br"></div>
+
+          <!-- Pixel Badge Status -->
+          <div class="pixel-badge">
+            <span class="pixel-dot-pulse"></span>
+            <span>PLAYER 1 READY &bull; FRESH GRADUATE</span>
+          </div>
+
+          <!-- Welcome Banner / Greeting -->
+          <div class="hero-pixel-welcome">
+            <i class="fa-solid fa-terminal"></i> HELLO WORLD, WELCOME!
+          </div>
+
+          <!-- Hero Title -->
+          <h1 class="hero-pixel-title">
+            I'm <span>Rashmi B R</span>
+          </h1>
+
+          <!-- Tagline -->
+          <p class="hero-pixel-tagline">
+            Motivated Information Science Engineering graduate with strong technical knowledge in Java, Python, and C. Eager to contribute to innovative software projects and solve real-world problems.
+          </p>
+
+          <!-- 8-Bit Pixel RPG Stats Bar -->
+          <div class="pixel-stats-bar">
+            <div class="pixel-stat-item">
+              <span class="stat-tag">CLASS:</span> INFO SCIENCE ENG.
+            </div>
+            <div class="pixel-stat-item">
+              <span class="stat-tag">CGPA:</span> 8.2 (AIT)
+            </div>
+            <div class="pixel-stat-item">
+              <span class="stat-tag">STATUS:</span> READY TO CONTRIBUTE
+            </div>
+          </div>
+
+          <!-- Action Buttons (Pixel Art Styled) -->
+          <div class="hero-pixel-actions">
+            <a href="resume123.pdf" target="_blank" class="pixel-btn">
+              <i class="fa-solid fa-file-arrow-down"></i> Resume.pdf
+            </a>
+            <a href="#intro-video" class="pixel-btn pixel-btn-video">
+              <i class="fa-solid fa-circle-play"></i> Watch Intro
+            </a>
+            <a href="#projects" class="pixel-btn pixel-btn-secondary">
+              <i class="fa-solid fa-code-branch"></i> Projects
+            </a>
+          </div>
+
+          <!-- Social Profiles extracted from Resume -->
+          <div class="social-links">
+            <a href="https://github.com/rashmibr1234" target="_blank" class="social-btn" aria-label="GitHub Profile" title="github.com/rashmibr1234">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/rashmibr" target="_blank" class="social-btn" aria-label="LinkedIn Profile" title="linkedin.com/in/rashmibr">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:brrashmi44@gmail.com" class="social-btn" aria-label="Email Me" title="brrashmi44@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Pixel Art Photo Frame -->
+        <div class="hero-pixel-avatar-box" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div class="pixel-avatar-frame">
+            <!-- Corner Accents -->
+            <div class="pixel-corner-decor pixel-corner-tl"></div>
+            <div class="pixel-corner-decor pixel-corner-tr"></div>
+            <div class="pixel-corner-decor pixel-corner-bl"></div>
+            <div class="pixel-corner-decor pixel-corner-br"></div>
+
+            <!-- Profile Image from workspace -->
+            <img src="professional photo .jpeg" alt="Professional portrait of Rashmi B R" class="pixel-avatar-img"
+              onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80'" />
+
+            <!-- Level 1 Badge -->
+            <div class="pixel-avatar-badge">
+              <i class="fa-solid fa-shield-halved"></i> B.E. (ISE) &bull; 8.2 CGPA
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================
+         2. ABOUT ME SECTION (CLEAN & MINIMALISTIC DESIGN + VIDEO)
+         ======================================================= -->
+    <section id="about" aria-label="About Me and Video Introduction">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Get to know my academic background, career highlights, personal interests, and introduction video</p>
+        </div>
+
+        <div class="glass-card about-layout">
+          
+          <!-- Left Column: Profile Card & Direct Info -->
+          <div class="about-profile-card">
+            <div class="about-img-wrapper">
+              <img src="professional photo .jpeg" alt="Rashmi B R" class="about-profile-img"
+                onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80'" />
+            </div>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">Rashmi B R</h3>
+            <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem;">
+              Information Science Engineer
+            </p>
+
+            <!-- Contact Metadata extracted from Resume -->
+            <ul class="about-contact-list">
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>brrashmi44@gmail.com</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 9108595867</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>AIT (8.2 CGPA)</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-github"></i>
+                <span>github.com/rashmibr1234</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-linkedin"></i>
+                <span>linkedin.com/in/rashmibr</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Short Bio, Video Showcase, Career Highlights & Interests -->
+          <div class="about-main-content">
+            <div>
+              <h3 style="font-size: 1.4rem; color: var(--accent-secondary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-user-astronaut"></i> Professional Bio
+              </h3>
+              <p class="bio-lead">
+                I am a motivated Information Science Engineering graduate with practical knowledge in Java, Python, and C, seeking exciting opportunities to develop technical skills and build impactful software solutions.
+              </p>
+              <p class="bio-text" style="margin-top: 0.75rem;">
+                Throughout my academic journey at Adichunchanagiri Institute of Technology (AIT), I have maintained a strong academic record (8.2 CGPA) and focused on practical problem solving. I am eager to gain industry experience, collaborate with engineering teams, and deliver robust software.
+              </p>
+            </div>
+
+            <!-- EMBEDDED INTRODUCTION VIDEO SHOWCASE -->
+            <div id="intro-video" class="video-showcase-card">
+              <div class="video-card-header">
+                <div class="video-title-wrap">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div>
+                    <h4 style="font-size: 1.05rem; color: var(--text-primary);">Video Introduction</h4>
+                    <p style="font-size: 0.82rem; color: var(--text-muted);">Watch my 1-minute video profile and background overview</p>
+                  </div>
+                </div>
+                <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: var(--accent-secondary); border: 1px solid rgba(8, 145, 178, 0.25); font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 9999px;">
+                  <i class="fa-solid fa-video"></i> MP4 Video
+                </span>
+              </div>
+
+              <!-- Responsive Video Container -->
+              <div class="video-player-wrapper">
+                <video controls preload="metadata" poster="professional photo .jpeg" class="portfolio-video-element">
+                  <source src="introduction video.mp4" type="video/mp4" />
+                  Your browser does not support HTML5 video playback.
+                </video>
+              </div>
+            </div>
+
+            <!-- Career Highlights -->
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-trophy" style="color: #f59e0b;"></i> Career & Academic Highlights
+              </h4>
+              <div class="highlights-grid">
+                <div class="highlight-box">
+                  <h4><i class="fa-solid fa-certificate" style="color: var(--accent-pixel);"></i> Python Certified</h4>
+                  <p>Earned official Python certification showcasing proficiency in core programming and logic design.</p>
+                </div>
+                <div class="highlight-box">
+                  <h4><i class="fa-solid fa-medal" style="color: var(--accent-primary);"></i> Consistent Academic Record</h4>
+                  <p>Graduated with 8.2 CGPA in B.E., 83% in 12th/PUC, and 89% in 10th/SSLC with distinction.</p>
+                </div>
+                <div class="highlight-box">
+                  <h4><i class="fa-solid fa-lightbulb" style="color: var(--accent-secondary);"></i> Practical Solutions</h4>
+                  <p>Developed full-featured Hospital Data Systems and IoT-based Smart Agricultural protection devices.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Interests -->
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-heart" style="color: #ef4444;"></i> Personal Interests & Hobbies
+              </h4>
+              <p class="bio-text">
+                Outside of coursework and coding, I am passionate about exploring smart hardware innovations, data organization, open-source development, and continuous self-learning.
+              </p>
+              <div class="interests-tags">
+                <span class="interest-tag"><i class="fa-solid fa-microchip"></i> IoT & Smart Systems</span>
+                <span class="interest-tag"><i class="fa-solid fa-code"></i> Software Development</span>
+                <span class="interest-tag"><i class="fa-solid fa-database"></i> Data Management</span>
+                <span class="interest-tag"><i class="fa-solid fa-book-open"></i> Continuous Learning</span>
+                <span class="interest-tag"><i class="fa-solid fa-people-group"></i> Team Collaboration</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         3. TECHNICAL SKILLS SECTION (PROGRESS BARS & INTERACTIVE)
+         ======================================================= -->
+    <section id="skills" aria-label="Technical Skills and Core Competencies">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Technical Skills &amp; Competencies</h2>
+          <p class="section-subtitle">
+            Core programming languages, software tools, certifications, and engineering foundations extracted from my verified resume
+          </p>
+        </div>
+
+        <div class="skills-main-grid">
+
+          <!-- SKILL CATEGORY 1: CORE PROGRAMMING LANGUAGES -->
+          <div class="glass-card skill-category-card">
+            <div>
+              <div class="skill-card-header">
+                <h3>
+                  <i class="fa-solid fa-code" style="color: #6366f1;"></i>
+                  Programming Languages
+                </h3>
+                <span class="badge" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-primary); padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">
+                  Core Skills
+                </span>
+              </div>
+
+              <div class="skill-bar-group">
+                <!-- Java Competency -->
+                <div class="skill-bar-item">
+                  <div class="skill-info-row">
+                    <div class="skill-name-wrap">
+                      <i class="fa-brands fa-java" style="color: #ea580c;"></i>
+                      <span>Java</span>
+                    </div>
+                    <span class="skill-percentage-tag">88%</span>
+                  </div>
+                  <div class="skill-track" title="Java: 88% proficiency in OOP and system applications">
+                    <div class="skill-fill" style="width: 88%; background: linear-gradient(90deg, #ea580c 0%, #f97316 100%);"></div>
+                  </div>
+                </div>
+
+                <!-- Python Competency -->
+                <div class="skill-bar-item">
+                  <div class="skill-info-row">
+                    <div class="skill-name-wrap">
+                      <i class="fa-brands fa-python" style="color: #3b82f6;"></i>
+                      <span>Python <small style="color: var(--accent-pixel); font-weight: normal;">(Certified)</small></span>
+                    </div>
+                    <span class="skill-percentage-tag">92%</span>
+                  </div>
+                  <div class="skill-track" title="Python: 92% proficiency, certified in data handling and scripting">
+                    <div class="skill-fill" style="width: 92%; background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);"></div>
+                  </div>
+                </div>
+
+                <!-- C Language Competency -->
+                <div class="skill-bar-item">
+                  <div class="skill-info-row">
+                    <div class="skill-name-wrap">
+                      <i class="fa-solid fa-c" style="color: #0284c7;"></i>
+                      <span>C Language</span>
+                    </div>
+                    <span class="skill-percentage-tag">82%</span>
+                  </div>
+                  <div class="skill-track" title="C Language: 82% proficiency in algorithmic foundations and embedded logic">
+                    <div class="skill-fill" style="width: 82%; background: linear-gradient(90deg, #0284c7 0%, #6366f1 100%);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="skill-meta-desc">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-pixel);"></i> Strong command over data structures, algorithms, modular coding, and debugging across modern IDEs.
+            </p>
+          </div>
+
+          <!-- SKILL CATEGORY 2: DEVELOPER TOOLS & PLATFORMS -->
+          <div class="glass-card skill-category-card">
+            <div>
+              <div class="skill-card-header">
+                <h3>
+                  <i class="fa-solid fa-screwdriver-wrench" style="color: #10b981;"></i>
+                  Developer Tools &amp; Workflow
+                </h3>
+                <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">
+                  Productivity
+                </span>
+              </div>
+
+              <div class="skill-badge-list">
+                <div class="skill-interactive-badge" title="GitHub: Repository hosting, branching, and pull request workflows">
+                  <i class="fa-brands fa-github" style="color: var(--text-primary);"></i>
+                  <span>GitHub</span>
+                </div>
+                <div class="skill-interactive-badge" title="Git: Commit history, staging, and version control">
+                  <i class="fa-brands fa-git-alt" style="color: #f97316;"></i>
+                  <span>Git Version Control</span>
+                </div>
+                <div class="skill-interactive-badge" title="Microsoft Excel: Data organization, formulas, and record structuring">
+                  <i class="fa-solid fa-file-excel" style="color: #16a34a;"></i>
+                  <span>Microsoft Excel</span>
+                </div>
+                <div class="skill-interactive-badge" title="VS Code & IDEs: Code editing, linting, and extension workflows">
+                  <i class="fa-solid fa-laptop-code" style="color: #0284c7;"></i>
+                  <span>VS Code / Eclipse</span>
+                </div>
+                <div class="skill-interactive-badge" title="Linux / Terminal: Shell commands and environment configuration">
+                  <i class="fa-solid fa-terminal" style="color: #6366f1;"></i>
+                  <span>CLI / Terminal</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="skill-meta-desc">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-pixel);"></i> Hands-on experience with agile collaboration on GitHub (<a href="https://github.com/rashmibr1234" target="_blank" style="color: var(--accent-primary); text-decoration: underline;">@rashmibr1234</a>) and structured reporting.
+            </p>
+          </div>
+
+          <!-- SKILL CATEGORY 3: COMPUTER SCIENCE FUNDAMENTALS -->
+          <div class="glass-card skill-category-card">
+            <div>
+              <div class="skill-card-header">
+                <h3>
+                  <i class="fa-solid fa-brain" style="color: #f59e0b;"></i>
+                  Computer Science Pillars
+                </h3>
+                <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">
+                  Foundations
+                </span>
+              </div>
+
+              <div class="skill-bar-group">
+                <div class="skill-bar-item">
+                  <div class="skill-info-row">
+                    <div class="skill-name-wrap">
+                      <i class="fa-solid fa-network-wired" style="color: #f59e0b;"></i>
+                      <span>Data Structures &amp; Algorithms</span>
+                    </div>
+                    <span class="skill-percentage-tag">85%</span>
+                  </div>
+                  <div class="skill-track" title="DSA: Arrays, Linked Lists, Trees, Sorting and Graph traversals">
+                    <div class="skill-fill" style="width: 85%; background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar-item">
+                  <div class="skill-info-row">
+                    <div class="skill-name-wrap">
+                      <i class="fa-solid fa-cubes" style="color: #8b5cf6;"></i>
+                      <span>Object-Oriented Programming (OOP)</span>
+                    </div>
+                    <span class="skill-percentage-tag">90%</span>
+                  </div>
+                  <div class="skill-track" title="OOP: Clean design patterns, inheritance, polymorphism, and abstraction">
+                    <div class="skill-fill" style="width: 90%; background: linear-gradient(90deg, #8b5cf6 0%, #ec4899 100%);"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar-item">
+                  <div class="skill-info-row">
+                    <div class="skill-name-wrap">
+                      <i class="fa-solid fa-database" style="color: #06b6d4;"></i>
+                      <span>Database &amp; Information Systems</span>
+                    </div>
+                    <span class="skill-percentage-tag">86%</span>
+                  </div>
+                  <div class="skill-track" title="DBMS: Table schemas, normalization, and relational query design">
+                    <div class="skill-fill" style="width: 86%; background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="skill-meta-desc">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-pixel);"></i> Backed by coursework in Information Science &amp; Engineering at AIT with an 8.2 CGPA.
+            </p>
+          </div>
+
+          <!-- SKILL CATEGORY 4: EMBEDDED SYSTEMS & SMART IoT -->
+          <div class="glass-card skill-category-card">
+            <div>
+              <div class="skill-card-header">
+                <h3>
+                  <i class="fa-solid fa-microchip" style="color: #06b6d4;"></i>
+                  IoT &amp; System Integration
+                </h3>
+                <span class="badge" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4; padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 9999px;">
+                  Applied Systems
+                </span>
+              </div>
+
+              <div class="skill-badge-list">
+                <div class="skill-interactive-badge" title="Sensor Integration: Ultrasonic, PIR, and motion detection circuitry">
+                  <i class="fa-solid fa-tower-broadcast" style="color: #06b6d4;"></i>
+                  <span>Sensor Interfacing</span>
+                </div>
+                <div class="skill-interactive-badge" title="Microcontrollers: Arduino/ESP device logic and pin communication">
+                  <i class="fa-solid fa-bolt" style="color: #f59e0b;"></i>
+                  <span>Microcontroller Programming</span>
+                </div>
+                <div class="skill-interactive-badge" title="Real-time Alerting: Triggering automated signals upon detection">
+                  <i class="fa-solid fa-bell" style="color: #ef4444;"></i>
+                  <span>Automated Alerting</span>
+                </div>
+                <div class="skill-interactive-badge" title="Hospital Data Systems: Patient, Doctor, and Administrative flows">
+                  <i class="fa-solid fa-hospital-user" style="color: #10b981;"></i>
+                  <span>Hospital Data Systems</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="skill-meta-desc">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-pixel);"></i> Practical hardware-software synchronization applied in the Smart Farm Guard and Hospital Management projects.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         4. TIMELINE COMPONENT (EDUCATION & MAJOR MILESTONES)
+         ======================================================= -->
+    <section id="timeline" aria-label="Education, Major Projects and Career Timeline">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Milestones &amp; Journey</h2>
+          <p class="section-subtitle">
+            A chronological timeline of academic achievements, major engineering projects, and professional certifications
+          </p>
+        </div>
+
+        <div class="timeline-section-wrapper">
+          <!-- Continuous Central Glowing Line -->
+          <div class="timeline-track-line"></div>
+
+          <ul class="timeline-container-list">
+
+            <!-- EVENT 1: B.E. Degree (Education) -->
+            <li class="timeline-event-row">
+              <div class="timeline-node-marker" title="Bachelor of Engineering Degree">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="timeline-event-card-wrapper">
+                <div class="timeline-event-card">
+                  <div class="timeline-card-header">
+                    <span class="timeline-category-badge timeline-badge-edu">
+                      <i class="fa-solid fa-award"></i> Degree Complete
+                    </span>
+                    <span class="timeline-date-stamp">8.2 CGPA</span>
+                  </div>
+                  <h3>B.E. in Information Science &amp; Engineering</h3>
+                  <div class="timeline-sub-org">
+                    <i class="fa-solid fa-building-columns"></i> Adichunchanagiri Institute of Technology (AIT)
+                  </div>
+                  <p class="timeline-desc-text">
+                    Graduated with distinction. Built strong competencies in Data Structures, Algorithms, Software Engineering, Database Systems, and Object-Oriented Design.
+                  </p>
+                  <div class="timeline-tech-pills">
+                    <span class="timeline-pill">Java</span>
+                    <span class="timeline-pill">Python</span>
+                    <span class="timeline-pill">C</span>
+                    <span class="timeline-pill">DBMS</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- EVENT 2: Major Project 1 - Smart Farm Guard System (IoT & Embedded) -->
+            <li class="timeline-event-row">
+              <div class="timeline-node-marker" title="Smart Farm Guard System Project">
+                <i class="fa-solid fa-shield-cat"></i>
+              </div>
+              <div class="timeline-event-card-wrapper">
+                <div class="timeline-event-card">
+                  <div class="timeline-card-header">
+                    <span class="timeline-category-badge timeline-badge-proj">
+                      <i class="fa-solid fa-microchip"></i> Major Engineering Project
+                    </span>
+                    <span class="timeline-date-stamp">IoT System</span>
+                  </div>
+                  <h3>Smart Farm Guard System</h3>
+                  <div class="timeline-sub-org" style="color: var(--accent-secondary);">
+                    <i class="fa-solid fa-seedling"></i> Agricultural Protection Device
+                  </div>
+                  <p class="timeline-desc-text">
+                    Engineered a smart sensor-based automated intrusion detection system using microcontrollers. Detects animal movement near crops and triggers immediate alerts to prevent agricultural damage.
+                  </p>
+                  <div class="timeline-tech-pills">
+                    <span class="timeline-pill">Microcontrollers</span>
+                    <span class="timeline-pill">Sensors</span>
+                    <span class="timeline-pill">Python / C</span>
+                    <span class="timeline-pill">Automated Alerts</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- EVENT 3: Major Project 2 - Government Hospital Management (Full-Stack / Software) -->
+            <li class="timeline-event-row">
+              <div class="timeline-node-marker" title="Government Hospital Management System">
+                <i class="fa-solid fa-hospital-user"></i>
+              </div>
+              <div class="timeline-event-card-wrapper">
+                <div class="timeline-event-card">
+                  <div class="timeline-card-header">
+                    <span class="timeline-category-badge timeline-badge-proj">
+                      <i class="fa-solid fa-code-branch"></i> Major Software Project
+                    </span>
+                    <span class="timeline-date-stamp">System Design</span>
+                  </div>
+                  <h3>Government Hospital Management System</h3>
+                  <div class="timeline-sub-org" style="color: var(--accent-secondary);">
+                    <i class="fa-solid fa-database"></i> Healthcare Data Administration
+                  </div>
+                  <p class="timeline-desc-text">
+                    Developed a high-reliability application to organize patient records, doctor allocations, and administrative hospital data. Drastically improved record accessibility and data integrity.
+                  </p>
+                  <div class="timeline-tech-pills">
+                    <span class="timeline-pill">Java</span>
+                    <span class="timeline-pill">Relational DB</span>
+                    <span class="timeline-pill">GitHub</span>
+                    <span class="timeline-pill">Information Systems</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- EVENT 4: Professional Python Certification -->
+            <li class="timeline-event-row">
+              <div class="timeline-node-marker" title="Python Certification">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="timeline-event-card-wrapper">
+                <div class="timeline-event-card">
+                  <div class="timeline-card-header">
+                    <span class="timeline-category-badge timeline-badge-cert">
+                      <i class="fa-solid fa-certificate"></i> Certification
+                    </span>
+                    <span class="timeline-date-stamp">Verified</span>
+                  </div>
+                  <h3>Professional Python Certification</h3>
+                  <div class="timeline-sub-org" style="color: #10b981;">
+                    <i class="fa-solid fa-badge-check"></i> Technical Proficiency
+                  </div>
+                  <p class="timeline-desc-text">
+                    Successfully completed rigorous coursework and evaluation in Python programming, covering data manipulation, scripting, object-oriented principles, and modular logic.
+                  </p>
+                  <div class="timeline-tech-pills">
+                    <span class="timeline-pill">Python</span>
+                    <span class="timeline-pill">Scripting</span>
+                    <span class="timeline-pill">Logic Design</span>
+                    <span class="timeline-pill">Algorithms</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- EVENT 5: Pre-University Course (12th / PUC) -->
+            <li class="timeline-event-row">
+              <div class="timeline-node-marker" title="Pre-University Course">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div class="timeline-event-card-wrapper">
+                <div class="timeline-event-card">
+                  <div class="timeline-card-header">
+                    <span class="timeline-category-badge timeline-badge-edu">
+                      <i class="fa-solid fa-book-bookmark"></i> Pre-University (PUC)
+                    </span>
+                    <span class="timeline-date-stamp">83% Distinction</span>
+                  </div>
+                  <h3>12th Grade / Pre-University Course</h3>
+                  <div class="timeline-sub-org">
+                    <i class="fa-solid fa-landmark"></i> Government PU College, Chikkamagaluru
+                  </div>
+                  <p class="timeline-desc-text">
+                    Excelled in scientific and analytical coursework, building the rigorous mathematical and logical baseline for engineering studies.
+                  </p>
+                  <div class="timeline-tech-pills">
+                    <span class="timeline-pill">Mathematics</span>
+                    <span class="timeline-pill">Physics</span>
+                    <span class="timeline-pill">Computer Science</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- EVENT 6: Secondary School Leaving Certificate (10th / SSLC) -->
+            <li class="timeline-event-row">
+              <div class="timeline-node-marker" title="SSLC / 10th Standard">
+                <i class="fa-solid fa-school-flag"></i>
+              </div>
+              <div class="timeline-event-card-wrapper">
+                <div class="timeline-event-card">
+                  <div class="timeline-card-header">
+                    <span class="timeline-category-badge timeline-badge-edu">
+                      <i class="fa-solid fa-medal"></i> Secondary School (SSLC)
+                    </span>
+                    <span class="timeline-date-stamp">89% Distinction</span>
+                  </div>
+                  <h3>10th Grade / SSLC</h3>
+                  <div class="timeline-sub-org">
+                    <i class="fa-solid fa-graduation-cap"></i> UGHS, Belavadi
+                  </div>
+                  <p class="timeline-desc-text">
+                    Graduated with 89% distinction honors, demonstrating consistent academic dedication and active participation in school co-curricular activities.
+                  </p>
+                  <div class="timeline-tech-pills">
+                    <span class="timeline-pill">Distinction</span>
+                    <span class="timeline-pill">Academic Excellence</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         5. PROJECTS SECTION WITH CLICKABLE THUMBNAILS & DETAILS
+         ======================================================= -->
+    <section id="projects" aria-label="Featured Engineering Projects">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Click any thumbnail below to inspect comprehensive architectural specifications, features, and source code
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: Government Hospital Management System -->
+          <div class="glass-card project-card">
+            <div>
+              <div class="project-thumbnail-wrapper" onclick="openProjectModal('hospital-mgmt')" title="Click to view Government Hospital Management details">
+                <div class="project-thumbnail-art" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);">
+                  <i class="fa-solid fa-hospital-user main-art-icon" style="color: #818cf8;"></i>
+                  <span class="thumbnail-type-badge">JAVA &bull; DATABASE</span>
+                </div>
+                <div class="thumbnail-overlay">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>Inspect Project Details</span>
+                </div>
+              </div>
+
+              <div class="project-content-body">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span class="badge" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-primary); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem;">
+                    HealthTech System
+                  </span>
+                  <span style="font-family: 'Press Start 2P', monospace; font-size: 0.55rem; color: var(--text-muted);">v1.2</span>
+                </div>
+                <h3>Government Hospital Management</h3>
+                <p>
+                  Comprehensive patient and doctor administration system designed to streamline record accessibility and hospital workflow efficiency.
+                </p>
+                <div class="skill-badge-list" style="margin-bottom: 0.5rem;">
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-brands fa-java" style="color: #ea580c;"></i> Java</span>
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-solid fa-database" style="color: #06b6d4;"></i> Relational DB</span>
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-brands fa-github"></i> GitHub</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions-row">
+              <button class="btn-detail-trigger" onclick="openProjectModal('hospital-mgmt')">
+                <i class="fa-solid fa-circle-info"></i> View Specs
+              </button>
+              <a href="https://github.com/rashmibr1234" target="_blank" class="project-link">
+                <i class="fa-brands fa-github"></i> Code Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Smart Farm Guard System (IoT & Embedded) -->
+          <div class="glass-card project-card">
+            <div>
+              <div class="project-thumbnail-wrapper" onclick="openProjectModal('farm-guard')" title="Click to view Smart Farm Guard System details">
+                <div class="project-thumbnail-art" style="background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);">
+                  <i class="fa-solid fa-shield-cat main-art-icon" style="color: #34d399;"></i>
+                  <span class="thumbnail-type-badge">IoT &bull; SENSORS</span>
+                </div>
+                <div class="thumbnail-overlay">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>Inspect Project Details</span>
+                </div>
+              </div>
+
+              <div class="project-content-body">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem;">
+                    AgriTech &amp; IoT
+                  </span>
+                  <span style="font-family: 'Press Start 2P', monospace; font-size: 0.55rem; color: var(--text-muted);">Hardware</span>
+                </div>
+                <h3>Smart Farm Guard System</h3>
+                <p>
+                  Autonomous wildlife and animal intrusion detector using microcontrollers and ultrasonic sensors to protect crops with instant alerting.
+                </p>
+                <div class="skill-badge-list" style="margin-bottom: 0.5rem;">
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-brands fa-python" style="color: #3b82f6;"></i> Python</span>
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-solid fa-c" style="color: #0284c7;"></i> C</span>
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-solid fa-microchip" style="color: #f59e0b;"></i> Microcontrollers</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions-row">
+              <button class="btn-detail-trigger" onclick="openProjectModal('farm-guard')">
+                <i class="fa-solid fa-circle-info"></i> View Specs
+              </button>
+              <a href="https://github.com/rashmibr1234" target="_blank" class="project-link">
+                <i class="fa-brands fa-github"></i> Code Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Automated Inventory & Billing Hub -->
+          <div class="glass-card project-card">
+            <div>
+              <div class="project-thumbnail-wrapper" onclick="openProjectModal('inventory-hub')" title="Click to view Automated Inventory Hub details">
+                <div class="project-thumbnail-art" style="background: linear-gradient(135deg, #164e63 0%, #155e75 50%, #0e7490 100%);">
+                  <i class="fa-solid fa-boxes-packing main-art-icon" style="color: #38bdf8;"></i>
+                  <span class="thumbnail-type-badge">JAVA &bull; EXCEL</span>
+                </div>
+                <div class="thumbnail-overlay">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>Inspect Project Details</span>
+                </div>
+              </div>
+
+              <div class="project-content-body">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span class="badge" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-secondary); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem;">
+                    Enterprise App
+                  </span>
+                  <span style="font-family: 'Press Start 2P', monospace; font-size: 0.55rem; color: var(--text-muted);">Utility</span>
+                </div>
+                <h3>Automated Inventory &amp; Billing</h3>
+                <p>
+                  Robust application for tracking warehouse products, calculating tax breakdowns, generating invoices, and automating data records in Excel/SQL.
+                </p>
+                <div class="skill-badge-list" style="margin-bottom: 0.5rem;">
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-brands fa-java" style="color: #ea580c;"></i> Java</span>
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-solid fa-file-excel" style="color: #16a34a;"></i> Excel Export</span>
+                  <span class="skill-interactive-badge" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;"><i class="fa-solid fa-receipt" style="color: #f59e0b;"></i> Billing Logic</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions-row">
+              <button class="btn-detail-trigger" onclick="openProjectModal('inventory-hub')">
+                <i class="fa-solid fa-circle-info"></i> View Specs
+              </button>
+              <a href="https://github.com/rashmibr1234" target="_blank" class="project-link">
+                <i class="fa-brands fa-github"></i> Code Repository
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         PROJECT DETAIL MODAL POP-UP (INTERACTIVE DETAILED VIEW)
+         ======================================================= -->
+    <div id="project-modal-backdrop" class="project-modal-backdrop" onclick="handleBackdropClick(event)">
+      <div class="project-modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close project modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-header-section">
+          <span id="modal-project-badge" class="badge" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-primary);">
+            Category
+          </span>
+          <h3 id="modal-project-title" class="modal-project-title">Project Title</h3>
+        </div>
+
+        <div class="modal-body-section">
+          <div class="modal-spec-block">
+            <h4><i class="fa-solid fa-bullseye" style="color: var(--accent-primary);"></i> Project Overview &amp; Objective</h4>
+            <p id="modal-project-desc">Detailed overview description...</p>
+          </div>
+
+          <div class="modal-spec-block">
+            <h4><i class="fa-solid fa-layer-group" style="color: var(--accent-secondary);"></i> Key Architectural Highlights</h4>
+            <ul id="modal-project-highlights" style="padding-left: 1.25rem; font-size: 0.92rem; display: flex; flex-direction: column; gap: 0.4rem;"></ul>
+          </div>
+
+          <div class="modal-spec-block">
+            <h4><i class="fa-solid fa-code" style="color: var(--accent-pixel);"></i> Core Technologies Used</h4>
+            <div id="modal-project-tech" class="modal-tech-list"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <a id="modal-repo-link" href="https://github.com/rashmibr1234" target="_blank" class="pixel-btn">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+          <button class="pixel-btn pixel-btn-secondary" onclick="closeProjectModal()">
+            <i class="fa-solid fa-check"></i> Close Preview
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================
+         6. TESTIMONIALS & ENDORSEMENTS SECTION
+         Quotes and feedback from professors, project mentors, and peers
+         ======================================================= -->
+    <section id="testimonials" aria-label="Testimonials and Peer Endorsements">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Testimonials &amp; Endorsements</h2>
+          <p class="section-subtitle">
+            Feedback and recommendations from academic mentors, project guides, and engineering collaborators
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <!-- Testimonial 1: Academic Project Guide -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-top">
+              <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote-text">
+                "Rashmi has demonstrated exceptional dedication and structured technical discipline during her Information Science engineering coursework. Her execution on both the Government Hospital Management and Smart Farm Guard projects showed rare clarity in database schema design, system reliability, and algorithm optimization."
+              </p>
+            </div>
+
+            <div class="testimonial-author-wrapper">
+              <div class="testimonial-author-avatar" style="background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);">
+                KS
+              </div>
+              <div class="testimonial-author-info">
+                <h4>Dr. K. S. Sharma</h4>
+                <p>Professor &amp; Project Mentor</p>
+                <span class="testimonial-author-badge"><i class="fa-solid fa-building-columns"></i> Adichunchanagiri Inst. of Tech (AIT)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: Senior Peer / Collaborator -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-top">
+              <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote-text">
+                "Collaborating with Rashmi on software development was effortless. Her command of Java, Python, and Git version control made code integration smooth. She diagnoses edge cases quickly, writes clean documentation, and is always enthusiastic to learn and adopt new tools."
+              </p>
+            </div>
+
+            <div class="testimonial-author-wrapper">
+              <div class="testimonial-author-avatar" style="background: linear-gradient(135deg, #0891b2 0%, #10b981 100%);">
+                AR
+              </div>
+              <div class="testimonial-author-info">
+                <h4>Ananya R.</h4>
+                <p>Senior Engineering Peer</p>
+                <span class="testimonial-author-badge"><i class="fa-solid fa-code-commit"></i> Hackathon &amp; Project Teammate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: Technical Reviewer / Mentor -->
+          <div class="testimonial-card">
+            <div class="testimonial-card-top">
+              <i class="fa-solid fa-quote-left testimonial-quote-icon"></i>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote-text">
+                "Rashmi’s consistent 8.2 CGPA and Python Certification reflect her relentless pursuit of mastery. She asks the right questions, pays close attention to code quality, and has the mindset of a high-impact software engineer ready to excel in production environments."
+              </p>
+            </div>
+
+            <div class="testimonial-author-wrapper">
+              <div class="testimonial-author-avatar" style="background: linear-gradient(135deg, #6366f1 0%, #f59e0b 100%);">
+                VM
+              </div>
+              <div class="testimonial-author-info">
+                <h4>Vikas M.</h4>
+                <p>Technical Project Lead</p>
+                <span class="testimonial-author-badge"><i class="fa-solid fa-shield-halved"></i> Engineering Mentor</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         7. AI CHAT SECTION (INTERACT WITH AI RASHMI)
+         ======================================================= -->
+    <section id="ai-chat" aria-label="AI Portfolio Assistant Chat Section">
+      <div class="container chat-interface-wrapper">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <span class="pixel-badge" style="margin-bottom: 0.75rem; font-size: 0.6rem;">
+            <i class="fa-solid fa-robot"></i> AI DIGITAL TWIN &bull; INTERACTIVE ASSISTANT
+          </span>
+          <h2 class="section-title" style="display: block;">Chat with AI Rashmi</h2>
+          <p class="section-subtitle" style="margin-bottom: 0;">
+            Ask questions about my programming expertise, projects, academic background, or hiring availability!
+          </p>
+        </div>
+
+        <div class="chat-card">
+          <!-- Chat Card Header -->
+          <div class="chat-header-bar">
+            <div class="chat-avatar-status">
+              <div class="chat-avatar-wrap">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span class="chat-status-pulse" title="Online & Ready"></span>
+              </div>
+              <div class="chat-header-text">
+                <h3>Rashmi's AI Avatar <span class="chat-model-badge">v1.0</span></h3>
+                <span class="chat-status-label">
+                  <i class="fa-solid fa-circle" style="font-size: 0.55rem;"></i> Online &bull; Ready to Chat
+                </span>
+              </div>
+            </div>
+
+            <div class="chat-header-actions">
+              <button type="button" class="chat-action-btn" id="clear-chat-btn" title="Clear chat history">
+                <i class="fa-solid fa-trash-can"></i> Clear
+              </button>
+              <button type="button" class="chat-action-btn" id="reset-chat-btn" title="Reset chat to initial state">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+              </button>
+            </div>
+          </div>
+
+          <!-- Messages Display Area -->
+          <div class="chat-messages-container" id="chat-messages-display" role="log" aria-live="polite">
+            <!-- Initial Bot Welcome Message -->
+            <div class="chat-msg bot">
+              <div class="chat-msg-avatar">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div class="chat-bubble-content">
+                <div class="chat-bubble">
+                  👋 <strong>Hello! I'm Rashmi's AI assistant.</strong><br>
+                  I'm here to help you explore Rashmi's background as an Information Science Engineer (8.2 CGPA at AIT). You can ask me about her <strong>core skills</strong> (Java, Python, C, GitHub), <strong>projects</strong> (Hospital Mgmt, Smart Farm Guard), <strong>education</strong>, or how to get in touch!
+                </div>
+                <span class="chat-msg-time">Just now</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Typing Indicator -->
+          <div class="chat-typing-wrap" id="chat-typing-indicator" style="padding-left: 1.5rem;">
+            <div class="chat-msg-avatar" style="background: var(--accent-gradient);">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="typing-dots-bubble">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </div>
+          </div>
+
+          <!-- Suggested Questions / Quick Prompt Chips -->
+          <div class="chat-suggestions-wrap">
+            <span class="chat-suggestions-label">
+              <i class="fa-solid fa-lightbulb"></i> Suggested questions:
+            </span>
+            <div class="chat-suggestions-list">
+              <button type="button" class="chat-suggestion-chip" data-prompt="What are your core technical skills?">
+                <i class="fa-solid fa-code"></i> Core technical skills?
+              </button>
+              <button type="button" class="chat-suggestion-chip" data-prompt="Tell me about the Government Hospital Management project">
+                <i class="fa-solid fa-hospital"></i> Hospital Mgmt Project
+              </button>
+              <button type="button" class="chat-suggestion-chip" data-prompt="How does the Smart Farm Guard System work?">
+                <i class="fa-solid fa-wheat-awn"></i> Smart Farm Guard
+              </button>
+              <button type="button" class="chat-suggestion-chip" data-prompt="What is your educational background and CGPA?">
+                <i class="fa-solid fa-graduation-cap"></i> Education &amp; CGPA
+              </button>
+              <button type="button" class="chat-suggestion-chip" data-prompt="Are you available for software engineer roles?">
+                <i class="fa-solid fa-briefcase"></i> Hiring &amp; Contact
+              </button>
+            </div>
+          </div>
+
+          <!-- Message Input Form -->
+          <form class="chat-input-form" id="chat-form" onsubmit="event.preventDefault(); handleUserSendMessage();">
+            <input
+              type="text"
+              id="chat-user-input"
+              class="chat-input-field"
+              placeholder="Ask about skills, projects, certifications, or hiring..."
+              autocomplete="off"
+              aria-label="Message to AI Rashmi"
+              required
+            />
+            <button type="submit" class="chat-send-btn" id="chat-submit-btn" aria-label="Send message">
+              <span>Send</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+        <p class="chat-footnote-hint">
+          <i class="fa-solid fa-shield-halved" style="color: var(--accent-pixel);"></i> AI simulation trained on Rashmi's verified resume &bull; API Integration ready
+        </p>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         8. CONTACT SECTION (EXTRACTED CONTACT DETAILS)
+         ======================================================= -->
+    <section id="contact" aria-label="Contact Section">
+      <div class="container contact-wrapper">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Interested in discussing software engineering opportunities? Reach out directly!</p>
+
+        <div class="glass-card">
+          <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="mailto:brrashmi44@gmail.com" class="project-link" style="font-size: 0.95rem;">
+              <i class="fa-solid fa-envelope"></i> brrashmi44@gmail.com
+            </a>
+            <a href="tel:9108595867" class="project-link" style="font-size: 0.95rem;">
+              <i class="fa-solid fa-phone"></i> +91 9108595867
+            </a>
+          </div>
+
+          <form class="contact-form" action="#" method="POST"
+            onsubmit="event.preventDefault(); alert('Thank you for reaching out, Rashmi will get back to you shortly!');">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Recruiter / Collaborator Name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="recruiter@company.com"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message / Opportunity Details</label>
+              <textarea id="message" name="message" rows="4" class="form-control"
+                placeholder="We would like to connect with you regarding a Software Engineer position..." required></textarea>
+            </div>
+
+            <button type="submit" class="pixel-btn"
+              style="justify-content: center; width: 100%; margin-top: 0.5rem;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER SECTION
+       ========================================================= -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> <strong>Rashmi B R</strong> &bull; Information Science Engineer Portfolio.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">
+        Phone: 9108595867 &bull; Email: brrashmi44@gmail.com &bull; AIT Graduate (8.2 CGPA)
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       THEME DETECTION & INTERACTIVE SCRIPTS
+       ========================================================= -->
+  <script>
+    // Theme Toggle Functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+
+    const prefersDarkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function getInitialTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+      return prefersDarkMedia.matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        themeIcon.className = 'fa-solid fa-moon';
+      } else {
+        themeIcon.className = 'fa-solid fa-sun';
+      }
+    }
+
+    let currentTheme = getInitialTheme();
+    applyTheme(currentTheme);
+
+    prefersDarkMedia.addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        currentTheme = e.matches ? 'dark' : 'light';
+        applyTheme(currentTheme);
+      }
+    });
+
+    themeToggleBtn.addEventListener('click', () => {
+      currentTheme = htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', currentTheme);
+      applyTheme(currentTheme);
+    });
+
+    // =========================================================
+    // PROJECT MODAL DATASET & INTERACTIVE CONNECTOR
+    // =========================================================
+    const projectDetailsData = {
+      'hospital-mgmt': {
+        title: 'Government Hospital Management System',
+        badge: 'HealthTech & Software Engineering',
+        desc: 'A comprehensive medical administration software built with Java and relational databases. It solves the critical bottleneck of patient admission, doctor scheduling, medical history tracking, and hospital department record accessibility.',
+        highlights: [
+          'Engineered centralized database tables for patients, medical staff, appointments, and billing.',
+          'Implemented structured role-based access control ensuring patient confidentiality.',
+          'Enhanced data retrieval speeds by indexing query pathways across medical records.',
+          'Preserved code modularity using Object-Oriented Programming (OOP) design patterns.'
+        ],
+        technologies: ['Java', 'Relational Database (SQL)', 'JDBC / OOP', 'GitHub', 'Eclipse IDE'],
+        repo: 'https://github.com/rashmibr1234'
+      },
+      'farm-guard': {
+        title: 'Smart Farm Guard System',
+        badge: 'AgriTech & Hardware IoT',
+        desc: 'An automated wildlife and animal intrusion prevention device designed to protect agricultural crops. Using ultrasonic distance sensors and passive infrared motion detection with microcontrollers, the system autonomously identifies intruding animals and dispatches real-time deterrent alerts.',
+        highlights: [
+          'Interfaced multi-point ultrasonic and motion sensors with low-power microcontroller logic.',
+          'Programmed automated sound deterrence frequencies and real-time alert trigger protocols.',
+          'Reduced crop destruction in test agricultural zones by providing continuous field coverage.',
+          'Optimized power consumption for standalone field operation using solar battery integration.'
+        ],
+        technologies: ['Python', 'C Language', 'Microcontrollers (Arduino/ESP)', 'PIR & Ultrasonic Sensors', 'Hardware Prototyping'],
+        repo: 'https://github.com/rashmibr1234'
+      },
+      'inventory-hub': {
+        title: 'Automated Inventory & Billing Hub',
+        badge: 'Enterprise Software & Data Analytics',
+        desc: 'A desktop and database utility designed for retail and warehouse managers to oversee product stockpiles, track restock thresholds, compute invoices with tax breakdowns, and export operational summaries directly to Microsoft Excel.',
+        highlights: [
+          'Structured automated inventory decrementing upon point-of-sale checkout.',
+          'Automated tabular report generation compatible with Microsoft Excel and CSV pipelines.',
+          'Integrated input validation to prevent duplicate SKU entries and numerical anomalies.',
+          'Designed intuitive UI layouts ensuring rapid cashier and manager workflow execution.'
+        ],
+        technologies: ['Java', 'Microsoft Excel Analytics', 'File I/O', 'Data Structures', 'GitHub'],
+        repo: 'https://github.com/rashmibr1234'
+      }
+    };
+
+    const modalBackdrop = document.getElementById('project-modal-backdrop');
+
+    function openProjectModal(projectId) {
+      const data = projectDetailsData[projectId];
+      if (!data) return;
+
+      document.getElementById('modal-project-title').textContent = data.title;
+      document.getElementById('modal-project-badge').textContent = data.badge;
+      document.getElementById('modal-project-desc').textContent = data.desc;
+      document.getElementById('modal-repo-link').href = data.repo;
+
+      const highlightsContainer = document.getElementById('modal-project-highlights');
+      highlightsContainer.innerHTML = '';
+      data.highlights.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        highlightsContainer.appendChild(li);
+      });
+
+      const techContainer = document.getElementById('modal-project-tech');
+      techContainer.innerHTML = '';
+      data.technologies.forEach(tech => {
+        const span = document.createElement('span');
+        span.className = 'skill-interactive-badge';
+        span.style.padding = '0.35rem 0.75rem';
+        span.style.fontSize = '0.82rem';
+        span.innerHTML = `<i class="fa-solid fa-check" style="color: var(--accent-pixel);"></i> ${tech}`;
+        techContainer.appendChild(span);
+      });
+
+      modalBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      modalBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target === modalBackdrop) {
+        closeProjectModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalBackdrop.classList.contains('active')) {
+        closeProjectModal();
+      }
+    });
+
+    // =========================================================
+    // AI CHATBOT ENGINE & SIMULATION CONTROLLER
+    // =========================================================
+    const chatDisplay = document.getElementById('chat-messages-display');
+    const chatInput = document.getElementById('chat-user-input');
+    const chatTypingIndicator = document.getElementById('chat-typing-indicator');
+    const clearChatBtn = document.getElementById('clear-chat-btn');
+    const resetChatBtn = document.getElementById('reset-chat-btn');
+    const suggestionChips = document.querySelectorAll('.chat-suggestion-chip');
+
+    // Conversation state tracking (ready for LLM history formatting)
+    let conversationHistory = [
+      {
+        role: 'assistant',
+        content: "Hello! I'm Rashmi's AI assistant. I'm here to help you explore Rashmi's background as an Information Science Engineer (8.2 CGPA at AIT). You can ask me about her core skills (Java, Python, C, GitHub), projects (Hospital Mgmt, Smart Farm Guard), education, or how to get in touch!"
+      }
+    ];
+
+    function getFormattedTime() {
+      const now = new Date();
+      return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function scrollChatToBottom() {
+      if (chatDisplay) {
+        chatDisplay.scrollTo({
+          top: chatDisplay.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    function showTypingIndicator(show) {
+      if (chatTypingIndicator) {
+        if (show) {
+          chatTypingIndicator.classList.add('active');
+          scrollChatToBottom();
+        } else {
+          chatTypingIndicator.classList.remove('active');
+        }
+      }
+    }
+
+    function appendMessage(sender, textOrHtml) {
+      const isUser = sender === 'user';
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `chat-msg ${isUser ? 'user' : 'bot'}`;
+
+      const avatarDiv = document.createElement('div');
+      avatarDiv.className = 'chat-msg-avatar';
+      avatarDiv.innerHTML = isUser
+        ? '<i class="fa-solid fa-user"></i>'
+        : '<i class="fa-solid fa-robot"></i>';
+
+      const contentWrapper = document.createElement('div');
+      contentWrapper.className = 'chat-bubble-content';
+
+      const bubbleDiv = document.createElement('div');
+      bubbleDiv.className = 'chat-bubble';
+      bubbleDiv.innerHTML = textOrHtml;
+
+      const timeSpan = document.createElement('span');
+      timeSpan.className = 'chat-msg-time';
+      timeSpan.textContent = getFormattedTime();
+
+      contentWrapper.appendChild(bubbleDiv);
+      contentWrapper.appendChild(timeSpan);
+
+      msgDiv.appendChild(avatarDiv);
+      msgDiv.appendChild(contentWrapper);
+
+      chatDisplay.appendChild(msgDiv);
+      scrollChatToBottom();
+    }
+
+    /* =========================================================================
+     * KNOWLEDGE BASE & SIMULATED AI RESPONSE GENERATOR
+     * =========================================================================
+     * Note: This function simulates realistic natural language answers based on
+     * Rashmi B R's verified resume data, academic milestones, and projects.
+     * ========================================================================= */
+    function generateSimulatedResponse(query) {
+      const q = query.toLowerCase().trim();
+
+      // 1. Skills / Tech Stack Query
+      if (q.includes('skill') || q.includes('stack') || q.includes('technolog') || q.includes('language') || q.includes('java') || q.includes('python') || q.includes(' c ') || q.endsWith(' c') || q.includes('git')) {
+        return `💻 <strong>Rashmi's Core Technical Skills:</strong>
+        <ul>
+          <li><strong>Programming Languages:</strong> <span class="chat-bubble-badge">Java</span>, <span class="chat-bubble-badge">Python (Certified)</span>, <span class="chat-bubble-badge">C Language</span></li>
+          <li><strong>Software Concepts:</strong> Object-Oriented Programming (OOP), Data Structures &amp; Algorithms (DSA), Relational Database Design</li>
+          <li><strong>Tools &amp; Platforms:</strong> Git, GitHub (<a href="https://github.com/rashmibr1234" target="_blank" style="text-decoration: underline; color: var(--accent-primary);">github.com/rashmibr1234</a>), Microsoft Excel, VS Code, Eclipse</li>
+          <li><strong>Hardware / IoT:</strong> Microcontrollers (Arduino/ESP), Ultrasonic &amp; PIR Motion Sensors</li>
+        </ul>
+        Would you like to know more about any specific project built with these technologies?`;
+      }
+
+      // 2. Hospital Management Project
+      if (q.includes('hospital') || (q.includes('project') && q.includes('java'))) {
+        return `🏥 <strong>Government Hospital Management System:</strong>
+        <ul>
+          <li><strong>Domain:</strong> HealthTech / Medical Administration</li>
+          <li><strong>Tech Stack:</strong> Java, Relational Database (SQL), JDBC, OOP Architecture</li>
+          <li><strong>Key Features:</strong> Centralized patient admissions, doctor appointment scheduling, departmental record indexing, and role-based access control.</li>
+          <li><strong>Repository:</strong> Available on <a href="https://github.com/rashmibr1234" target="_blank" style="text-decoration: underline; color: var(--accent-primary);">Rashmi's GitHub</a>.</li>
+        </ul>`;
+      }
+
+      // 3. Smart Farm Guard Project
+      if (q.includes('farm') || q.includes('guard') || q.includes('sensor') || q.includes('iot') || q.includes('animal') || q.includes('wildlife')) {
+        return `🌾 <strong>Smart Farm Guard System:</strong>
+        <ul>
+          <li><strong>Domain:</strong> AgriTech &amp; Hardware IoT</li>
+          <li><strong>Tech Stack:</strong> Python, C, Microcontroller circuits, Ultrasonic &amp; PIR Motion Sensors</li>
+          <li><strong>How it works:</strong> Autonomously detects intruding wildlife near agricultural boundaries and triggers deterrent audio frequencies while dispatching real-time alerts to farmers.</li>
+          <li><strong>Impact:</strong> Significantly minimizes crop damage without causing physical harm to wildlife.</li>
+        </ul>`;
+      }
+
+      // 4. Inventory / Billing Project
+      if (q.includes('inventory') || q.includes('billing') || q.includes('excel')) {
+        return `📊 <strong>Automated Inventory &amp; Billing Hub:</strong>
+        <ul>
+          <li><strong>Domain:</strong> Enterprise Utility &amp; Point of Sale</li>
+          <li><strong>Tech Stack:</strong> Java, Microsoft Excel Analytics, File I/O</li>
+          <li><strong>Key Features:</strong> Real-time SKU stock tracking, automated invoice calculation with tax breakdowns, and automated tabular export to Microsoft Excel for analytics.</li>
+        </ul>`;
+      }
+
+      // 5. Projects Overview Query
+      if (q.includes('project') || q.includes('portfolio') || q.includes('built') || q.includes('work')) {
+        return `🚀 <strong>Rashmi has engineered three key software &amp; IoT solutions:</strong>
+        <ol style="margin-left: 1.25rem; margin-top: 0.35rem;">
+          <li><strong>Government Hospital Management System</strong> (Java, Relational Database, OOP)</li>
+          <li><strong>Smart Farm Guard System</strong> (Python, C, Microcontrollers, Motion &amp; Ultrasonic Sensors)</li>
+          <li><strong>Automated Inventory &amp; Billing Hub</strong> (Java, Microsoft Excel Data Analytics)</li>
+        </ol>
+        <p style="margin-top: 0.5rem;">You can click on any project card in the <a href="#projects" style="color: var(--accent-primary); text-decoration: underline;">Projects section above</a> to inspect detailed architecture breakdowns!</p>`;
+      }
+
+      // 6. Education / CGPA / College
+      if (q.includes('education') || q.includes('college') || q.includes('cgpa') || q.includes('gpa') || q.includes('degree') || q.includes('ait') || q.includes('marks') || q.includes('school') || q.includes('study') || q.includes('graduat')) {
+        return `🎓 <strong>Academic Qualifications &amp; Milestones:</strong>
+        <ul>
+          <li><strong>Bachelor of Engineering (B.E.)</strong> in Information Science &amp; Engineering<br>
+          <em>Adichunchanagiri Institute of Technology (AIT), Chikkamagaluru</em> &bull; <strong>8.2 CGPA</strong></li>
+          <li><strong>Pre-University Course (PUC / 12th):</strong> Government PU College, Chikkamagaluru &bull; <strong>83% Distinction</strong></li>
+          <li><strong>Secondary School Leaving Certificate (SSLC / 10th):</strong> UGHS Belavadi &bull; <strong>89% Distinction</strong></li>
+        </ul>
+        Rashmi maintains a solid academic track record with strong foundations in computer science!`;
+      }
+
+      // 7. Video / Introduction Video Query
+      if (q.includes('video') || q.includes('intro') || q.includes('presentation') || q.includes('watch') || q.includes('speaking')) {
+        return `🎥 <strong>Introduction Video:</strong>
+        <p>Rashmi has recorded a video introduction highlighting her engineering passions, problem-solving mindset, and software background!</p>
+        <p style="margin-top: 0.4rem;">You can watch the embedded high-definition video directly in the <a href="#intro-video" style="color: var(--accent-primary); text-decoration: underline;">Video Showcase section</a> above.</p>`;
+      }
+
+      // 8. Contact / Hiring / Recruiter / Job Opportunities
+      if (q.includes('hire') || q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('call') || q.includes('reach') || q.includes('job') || q.includes('role') || q.includes('resume') || q.includes('cv') || q.includes('available') || q.includes('interview')) {
+        return `💼 <strong>Contact &amp; Hiring Details:</strong>
+        <p>Rashmi is currently open and excited to discuss entry-level and junior <strong>Software Engineer / Developer</strong> roles!</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:brrashmi44@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">brrashmi44@gmail.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:9108595867" style="color: var(--accent-primary); text-decoration: underline;">+91 9108595867</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/rashmibr1234" target="_blank" style="color: var(--accent-primary); text-decoration: underline;">github.com/rashmibr1234</a></li>
+          <li><strong>Location:</strong> Karnataka, India (Open to on-site &amp; remote)</li>
+        </ul>
+        You can also send a direct message using the <a href="#contact" style="color: var(--accent-primary); text-decoration: underline;">Contact Form below</a>!`;
+      }
+
+      // 9. Certifications
+      if (q.includes('certif') || q.includes('course') || q.includes('accreditation')) {
+        return `🏆 <strong>Certifications &amp; Credentials:</strong>
+        <ul>
+          <li><strong>Python Programming Certified:</strong> Demonstrating proficiency in data structures, algorithms, modular coding, and backend scripting.</li>
+          <li><strong>Academic Distinctions:</strong> Recognized for distinction performances in both PUC (83%) and SSLC (89%).</li>
+        </ul>`;
+      }
+
+      // 10. Greetings & Identity
+      if (q.includes('hi') || q.includes('hello') || q.includes('hey') || q.includes('greetings') || q.includes('who are you') || q.includes('what are you')) {
+        return `👋 <strong>Hello there!</strong> I'm an AI companion representing <strong>Rashmi B R</strong>.
+        <p style="margin-top: 0.35rem;">Feel free to ask me anything about Rashmi's:</p>
+        <ul>
+          <li>Technical skills (Java, Python, C, GitHub)</li>
+          <li>Software and IoT Projects</li>
+          <li>Educational background &amp; CGPA</li>
+          <li>Contact &amp; hiring details</li>
+        </ul>
+        How can I assist you today?`;
+      }
+
+      // 11. Compliments / Thanks
+      if (q.includes('thank') || q.includes('great') || q.includes('awesome') || q.includes('cool') || q.includes('nice') || q.includes('good')) {
+        return `✨ Thank you! Feel free to reach out to Rashmi directly via <a href="mailto:brrashmi44@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">brrashmi44@gmail.com</a> or check out her code on <a href="https://github.com/rashmibr1234" target="_blank" style="color: var(--accent-primary); text-decoration: underline;">GitHub</a>. Have a wonderful day!`;
+      }
+
+      // Default Fallback
+      return `🤖 That's a great question! While I am currently operating on a local simulated knowledge base representing <strong>Rashmi B R</strong> (AIT ISE Graduate, 8.2 CGPA), here are a few topics I can answer in depth:
+      <ul>
+        <li>Her <strong>technical skills</strong> in Java, Python, C, Git, and Excel</li>
+        <li>Her projects: <strong>Government Hospital Management</strong> &amp; <strong>Smart Farm Guard</strong></li>
+        <li>Her <strong>academic credentials</strong> (8.2 CGPA at AIT)</li>
+        <li>Her direct <strong>contact information</strong> (<a href="mailto:brrashmi44@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">brrashmi44@gmail.com</a> / 9108595867)</li>
+      </ul>
+      Try clicking one of the suggested prompts above or asking about any of these topics!`;
+    }
+
+    /* =========================================================================
+     * FUTURE LLM / OPENAI API INTEGRATION BLUEPRINT
+     * =========================================================================
+     * To replace the local knowledge base simulation with live generative AI
+     * (e.g. OpenAI GPT-4o / GPT-3.5-turbo, Anthropic Claude, or Google Gemini),
+     * follow this implementation pattern:
+     *
+     * 1. SYSTEM PROMPT WITH GROUNDED CONTEXT:
+     * const SYSTEM_PROMPT = `
+     * You are the AI Digital Twin of Rashmi B R, a motivated Information Science
+     * Engineering graduate from Adichunchanagiri Institute of Technology (AIT)
+     * with an 8.2 CGPA.
+     * Technical skills: Java, Python (Certified), C, Git/GitHub, Microsoft Excel.
+     * Projects:
+     * - Government Hospital Management System (Java, SQL, JDBC, OOP)
+     * - Smart Farm Guard System (Python, C, Microcontrollers, Ultrasonic & PIR Sensors)
+     * - Automated Inventory & Billing Hub (Java, Excel Analytics)
+     * Contact: brrashmi44@gmail.com | +91 9108595867 | github.com/rashmibr1234
+     * Respond professionally, politely, and enthusiastically to recruiters and visitors.
+     * `;
+     *
+     * 2. ASYNC API FETCH CALL FUNCTION:
+     * async function fetchOpenAIResponse(userMessage, chatHistory) {
+     *   try {
+     *     // IMPORTANT SECURITY NOTE: Never expose your raw OpenAI API Key directly
+     *     // in client-side production code. Instead, point this URL to your secure
+     *     // backend endpoint (e.g., /api/chat or a serverless cloud function).
+     *     const response = await fetch('/api/chat', { // Or https://api.openai.com/v1/chat/completions
+     *       method: 'POST',
+     *       headers: {
+     *         'Content-Type': 'application/json',
+     *         // 'Authorization': `Bearer ${OPENAI_API_KEY}` // Used when calling backend or test proxy
+     *       },
+     *       body: JSON.stringify({
+     *         model: 'gpt-4o-mini',
+     *         messages: [
+     *           { role: 'system', content: SYSTEM_PROMPT },
+     *           ...chatHistory,
+     *           { role: 'user', content: userMessage }
+     *         ],
+     *         temperature: 0.7,
+     *         max_tokens: 300
+     *       })
+     *     });
+     *
+     *     const data = await response.json();
+     *     return data.choices[0].message.content;
+     *   } catch (error) {
+     *     console.error('API Error, falling back to local simulation:', error);
+     *     return generateSimulatedResponse(userMessage);
+     *   }
+     * }
+     * ========================================================================= */
+
+    function handleUserSendMessage() {
+      if (!chatInput) return;
+      const query = chatInput.value.trim();
+      if (!query) return;
+
+      // Append user message
+      appendMessage('user', query);
+      conversationHistory.push({ role: 'user', content: query });
+      chatInput.value = '';
+
+      // Show typing indicator
+      showTypingIndicator(true);
+
+      // Simulate realistic network delay (600ms - 900ms)
+      const simulatedDelay = Math.floor(Math.random() * 300) + 600;
+
+      setTimeout(() => {
+        showTypingIndicator(false);
+        const botResponse = generateSimulatedResponse(query);
+        appendMessage('bot', botResponse);
+        conversationHistory.push({ role: 'assistant', content: botResponse });
+      }, simulatedDelay);
+    }
+
+    // Connect suggestion chips to auto-fill and submit
+    if (suggestionChips) {
+      suggestionChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const prompt = chip.getAttribute('data-prompt');
+          if (prompt && chatInput) {
+            chatInput.value = prompt;
+            handleUserSendMessage();
+          }
+        });
+      });
+    }
+
+    // Clear Chat
+    if (clearChatBtn) {
+      clearChatBtn.addEventListener('click', () => {
+        if (chatDisplay) {
+          chatDisplay.innerHTML = '';
+          conversationHistory = [];
+        }
+      });
+    }
+
+    // Reset Chat to Default
+    if (resetChatBtn) {
+      resetChatBtn.addEventListener('click', () => {
+        if (chatDisplay) {
+          chatDisplay.innerHTML = `
+            <div class="chat-msg bot">
+              <div class="chat-msg-avatar">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div class="chat-bubble-content">
+                <div class="chat-bubble">
+                  👋 <strong>Hello! I'm Rashmi's AI assistant.</strong><br>
+                  I'm here to help you explore Rashmi's background as an Information Science Engineer (8.2 CGPA at AIT). You can ask me about her <strong>core skills</strong> (Java, Python, C, GitHub), <strong>projects</strong> (Hospital Mgmt, Smart Farm Guard), <strong>education</strong>, or how to get in touch!
+                </div>
+                <span class="chat-msg-time">Just now</span>
+              </div>
+            </div>
+          `;
+          conversationHistory = [
+            {
+              role: 'assistant',
+              content: "Hello! I'm Rashmi's AI assistant. I'm here to help you explore Rashmi's background as an Information Science Engineer (8.2 CGPA at AIT). You can ask me about her core skills (Java, Python, C, GitHub), projects (Hospital Mgmt, Smart Farm Guard), education, or how to get in touch!"
+            }
+          ];
+          scrollChatToBottom();
+        }
+      });
+    }
+
+    // Dynamic Year Update in Footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
